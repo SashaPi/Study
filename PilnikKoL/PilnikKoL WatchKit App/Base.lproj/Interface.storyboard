@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19455" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch44"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19454"/>
+    </dependencies>
+    <scenes>
+        <!--Table RecipesIC-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="TableRecipesIC" customModule="PilnikKoL_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <imageView width="67" height="68" alignment="center" verticalAlignment="center" image="logo" id="EI5-q2-zsS"/>
+                        <label alignment="center" verticalAlignment="center" text="CookBook" id="tni-Mc-6sB">
+                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <segue destination="M7i-6k-WDI" kind="relationship" relationship="nextPage" id="wce-NO-gS4"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-74" y="-47"/>
+        </scene>
+        <!--Table RecipesIC-->
+        <scene sceneID="hYR-Lp-eis">
+            <objects>
+                <controller id="M7i-6k-WDI" customClass="TableRecipesIC" customModule="PilnikKoL_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="PId-Sq-LT4">
+                            <items>
+                                <tableRow identifier="tableRow" id="N7Q-jT-kGj" customClass="RowTable">
+                                    <group key="rootItem" width="1" alignment="left" id="Chf-eW-bdB">
+                                        <items>
+                                            <imageView width="30" height="30" alignment="left" verticalAlignment="center" image="swift" catalog="system" id="daO-1o-sNZ">
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </imageView>
+                                            <label width="72" height="24" alignment="left" verticalAlignment="center" text="RecName" id="HxI-pk-1Ze"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="rowPicture" destination="daO-1o-sNZ" id="GqX-lm-SzS"/>
+                                        <outlet property="rowRecipeName" destination="HxI-pk-1Ze" id="736-gs-ZYZ"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="PId-Sq-LT4" id="4g4-BX-5lV"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="153.7391304347826" y="-47.053571428571431"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="DnK-6x-a4d">
+            <objects>
+                <controller id="oLF-4w-NLR">
+                    <items>
+                        <group width="1" alignment="left" id="A4q-sX-eJV">
+                            <items>
+                                <label width="136" height="20" alignment="center" text="IC name" textAlignment="center" id="yuR-6X-Lew"/>
+                            </items>
+                        </group>
+                        <imageView width="101" height="83" alignment="center" verticalAlignment="center" id="HKI-SH-8I5"/>
+                        <group width="1" alignment="left" layout="vertical" id="tGp-WA-KJw"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="374.73913043478257" y="-47.053571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="48" height="48"/>
+        <image name="swift" catalog="system" width="128" height="112"/>
+    </resources>
+</document>
